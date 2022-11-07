@@ -1,0 +1,244 @@
+$anim-speed-1: 100s;
+
+.designs{
+    position: relative;
+
+    height: calc(100vw / 1.76);
+   
+    width: 100%;
+
+    @include flex-row-center;
+   
+
+    background-image: url('/src/img/bg-1.png');
+
+    background-size:calc(100vw * 8);
+
+    overflow: hidden;
+
+    animation: slider-bg-fx 4s infinite linear ;
+    @keyframes slider-bg-fx {
+        from {background-position: -200px 30px; }
+        50% {background-position: 0 0}
+        to {background-position: -200px 30px}
+    }
+
+
+    &__cloud-1{
+        z-index: 1;
+
+        position: absolute;
+
+
+        top: calc((100vw / 10) - 5%);
+        width: calc(100vw / 20);
+       
+    
+        animation: cloud-designs-Move1 $anim-speed-1 infinite linear;
+        @keyframes cloud-designs-Move1 {
+            from {right: calc(100vw / 2);}
+            50% {right: calc(100vw / 3);}
+            to {right: calc(100vw / 2);}
+        }
+    
+    }
+    
+    &__cloud-2{
+        z-index: 1;
+    
+        position: absolute;
+
+        top: calc((100vw / 3) - 18%);
+        width: calc(100vw / 5);
+       
+    
+    
+    
+        animation: cloud-designs-Move2 $anim-speed-1 infinite linear;
+        @keyframes cloud-designs-Move2 {
+            from {right: calc(100vw / 1.2); }
+            50% {right: calc(100vw / 1.5);}
+            to {right: calc(100vw / 1.2); }
+        }
+    
+    
+    }
+
+    &__cloud-3{
+        z-index: 1;
+    
+        position: absolute;
+        
+    
+        top: calc((100vw / 3) - 3%);
+        width: calc(100vw / 5);
+    
+    
+        
+    
+        animation: cloud-designs-Move3 $anim-speed-1 infinite linear;
+        @keyframes cloud-designs-Move3 {
+            from {right: calc(100vw / 8); }
+            50% {right: calc(100vw / 20); }
+            to {right: calc(100vw / 8);  }
+        }
+    
+    
+    }
+
+
+
+    &__title{
+
+        margin: 0 20% 0 3%;
+
+        font-size: calc(100vw / 100);
+
+        color: $title-color-3;
+        letter-spacing: 2px;
+
+        text-shadow: $titles-text-shadow;
+    }
+
+
+    &__items{
+        margin-left: 20%;
+        
+
+        @include flex-column-center;
+    }
+
+
+//  ------------------------------------------------------------------------------------------------------------------   
+
+@mixin item-hover-fx {
+    transform: scale(1.2) !important;
+    
+    animation: card-halo 3s infinite ease-in-out;
+    
+    @keyframes card-halo {
+                
+        
+        
+        
+        from {box-shadow: 0px 8px 60px rgba($color: #ffffff, $alpha: 0) ;}
+                15% {box-shadow: 0px 8px 60px rgba($color: #ffffff, $alpha: 0.5) ;}
+                80% {box-shadow: 0px 2px 4px rgba($color: #000000, $alpha: 0.4) ;}
+                to {box-shadow: 0px 2px 5px rgba($color: #ffffff, $alpha: 0) ;}
+                
+            }
+        }
+        
+//  ------------------------------------------------------------------------------------------------------------------   
+
+
+    &__item-1{
+        z-index: 3;
+
+        background-image: url('/src/img/cutspace.png');
+        background-size: 100%;
+
+        margin: 20px;
+
+        height: calc(100vw / 13);
+        width: calc(100vw / 7.5);
+
+        border-radius: 15px;
+
+        transition: $designs-item-transition;
+        
+        cursor: pointer;
+
+        
+
+        box-shadow: 0px 1px 20px rgba($color: #000000, $alpha: 0.1 );
+
+        &:hover{
+            
+            @include item-hover-fx
+            
+        }
+    }
+
+    &__item-2{
+        z-index: 3;
+
+        background-image: url('/src/img/cutspace.png');
+        background-size: 105%;
+
+        margin: 20px;
+
+        height: calc(100vw / 13);
+        width: calc(100vw / 7.5);
+
+        border-radius: 15px;
+
+        transition: $designs-item-transition;
+        
+        cursor: pointer;
+
+        
+
+        box-shadow: 0px 1px 20px rgba($color: #000000, $alpha: 0.1 );
+
+        &:hover{
+            
+            @include item-hover-fx
+            
+        }
+    }
+
+    &__item-3{
+        z-index: 3;
+
+        background-image: url('/src/img/cutspace.png');
+        background-size: 100%;
+
+        margin: 20px;
+
+        height: calc(100vw / 13);
+        width: calc(100vw / 7.5);
+
+        border-radius: 15px;
+
+        transition: $designs-item-transition;
+        
+        cursor: pointer;
+
+        
+
+        box-shadow: 0px 1px 20px rgba($color: #000000, $alpha: 0.1 );
+
+        &:hover{
+            
+            @include item-hover-fx
+            
+        }
+    }
+
+    &__link-1{
+        
+
+        background-image: url('https://drive.google.com/uc?export=view&id=1-tyc_XtkUswyqYHlFGXYZ6raN_fqYx6R');
+        background-size: 100%;
+
+    }
+    &__link-2{
+        background-image: url('https://drive.google.com/uc?export=view&id=1-t3nX4dh0ZuJ2-TQIm7L7AYz41_XGk5r');
+        background-size: 100%;
+
+    }
+    &__link-3{
+        background-image: url('https://drive.google.com/uc?export=view&id=1-tZT16zYOdaSTgFdoAD2LnBGhLbUph98');
+        background-size: 100%;
+    }
+
+    &__to-about{
+
+       position: absolute;
+
+       top: calc((100vw / 3) - 30%);
+       right: calc((100vw / 2) - 14%);
+
+    }
+}

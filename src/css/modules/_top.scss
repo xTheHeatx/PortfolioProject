@@ -1,0 +1,295 @@
+.menu-button{
+    position: absolute;
+    right: 96%;
+    bottom: 91%;
+
+    width: calc(100vw / 50);
+    height: calc(100vw / 20);
+
+    
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    &__dot-button{
+            margin-bottom: 3px;
+            
+            width: calc(100vw / 210);
+            height: calc(100vw / 210);
+
+            
+        
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #fffae8;
+            
+            position: relative;
+            border-radius: 60px;
+        
+            transition: $pop-button-transition;
+        
+            animation: pop-btn 2.5s infinite ease-in-out;
+            @keyframes pop-btn {
+                        from {box-shadow: 0px 1px 10px rgba($color: #ffffff, $alpha: 0.1) ;}
+                        15% {box-shadow: 0px 1px 10px rgba($color: #ffffff, $alpha: 1) ;}
+                        95% {box-shadow: 0px 1px 10px rgba($color: #5e370b, $alpha: 0.3) ;}
+                        to {box-shadow: 0px 1px 10px rgba($color: #ffffff, $alpha: 0) ;}
+            }
+    
+        }
+  
+}
+
+
+$scale3D-low: scale3d(1, 1, 1);
+$scale3D-hi: scale3d(1.2, 1.2, 1.2);
+$anim-speed: 20s;
+
+
+.top{
+
+    height: calc(100vw / 1.76);
+
+    width: 100%;
+
+    @include flex-column-center;
+
+     
+    background: url(/src/img/bg-1-1.png);
+
+    overflow: hidden;
+
+    animation: main-bg-fx 15s infinite linear ;
+    @keyframes main-bg-fx {
+        
+        from {background-size:calc(100vw * 7); background-position-x: -700px; background-position-y: -100px;}
+        50% {background-size:calc(100vw * 5); background-position-x: 50px;background-position-y: 50px;}
+        to {background-size:calc(100vw * 7); background-position-x: -700px;background-position-y: -100px;}
+    }
+
+    &__title{   
+
+        margin-bottom: 2%;
+            
+        text-align: center;
+        font-size: calc(100vw / 70);
+        
+        color: $title-color-3;
+        letter-spacing: 2px;
+        
+        text-shadow: $titles-text-shadow;
+        
+    }
+
+    &__button-go{
+        
+    }
+
+
+    &__clouds{
+        position: relative;
+        z-index: 1;
+        filter: brightness(0.99);
+        
+    }
+
+    &__cloud-1{
+        z-index: 2;
+
+
+        top: calc((100vw / 7) - 10%);
+        right: calc((100vw / 9) - 10%);
+
+        width: calc(100vw / 3);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+    &__cloud-2{
+        z-index: 2;
+
+
+        top: calc((100vw / 15) - 12%);
+        right: calc((100vw / 5) - 10%);
+
+        width: calc(100vw / 2);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+    &__cloud-3{
+        z-index: 2;
+
+
+        top: calc((100vw / 39) - 12%);
+        left: calc((100vw / 5) - 10%);
+
+        width: calc(100vw / 3);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+    &__cloud-4{
+        z-index: 2;
+
+
+        top: calc((100vw / 35) - 12%);
+        left: calc((100vw / 10) - 10%);
+
+        width: calc(100vw / 1);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+    &__cloud-5{
+        z-index: 2;
+
+
+        top: calc((100vw / 10) - 12%);
+        right: calc((100vw / 30) - 10%);
+
+        width: calc(100vw / 1.5);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+    &__cloud-6{
+        z-index: 2;
+
+
+        top: calc((100vw / 10) - 12%);
+        right: calc(((100vw / 10) - 20%) - 400px);
+
+        width: calc(100vw / 2);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+    &__cloud-7{
+        z-index: 1;
+
+
+        top: calc((100vw / 10) - 12%);
+        right: calc(((100vw / 10) - 20%) - 700px);
+
+        width: calc(100vw / 2);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+    &__cloud-8{
+        z-index: 1;
+
+
+        top: calc((100vw / 10) - 12%);
+        right: calc(((100vw / 10) - 20%) - 1900px);
+
+        width: calc(100vw / 2);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+    &__cloud-9{
+        z-index: 1;
+
+
+        top: calc((100vw / 10) - 12%);
+        left: calc(((100vw / 10) - 20%) - 300px);
+
+        width: calc(100vw / 1.5);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+    &__cloud-10{
+        z-index: 1;
+
+
+        top: calc((100vw / 20) - 12%);
+        right: calc(((100vw / 10) - 20%) - 1000px);
+
+        width: calc(100vw / 2);
+       
+    
+        animation: cloud-1-Move $anim-speed infinite linear;
+
+        @keyframes cloud-1-Move {
+            from {transform:$scale3D-low;}
+            50% {transform:$scale3D-hi;}
+            to {transform:$scale3D-low;}
+        }
+    }
+
+   
+}
+
+.cloud-3d{
+    position: absolute;
+}
+
