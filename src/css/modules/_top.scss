@@ -1,47 +1,3 @@
-.menu-button{
-    position: absolute;
-    right: 96%;
-    bottom: 91%;
-
-    width: calc(100vw / 50);
-    height: calc(100vw / 20);
-
-    
-
-    background: transparent;
-    border: none;
-
-    cursor: pointer;
-
-    &__dot-button{
-            margin-bottom: 3px;
-            
-            width: calc(100vw / 210);
-            height: calc(100vw / 210);
-
-            
-        
-            border: none;
-            outline: none;
-            color: #fff;
-            background: #fffae8;
-            
-            position: relative;
-            border-radius: 60px;
-        
-            transition: $pop-button-transition;
-        
-            animation: pop-btn 2.5s infinite ease-in-out;
-            @keyframes pop-btn {
-                        from {box-shadow: 0px 1px 10px rgba($color: #ffffff, $alpha: 0.1) ;}
-                        15% {box-shadow: 0px 1px 10px rgba($color: #ffffff, $alpha: 1) ;}
-                        95% {box-shadow: 0px 1px 10px rgba($color: #5e370b, $alpha: 0.3) ;}
-                        to {box-shadow: 0px 1px 10px rgba($color: #ffffff, $alpha: 0) ;}
-            }
-    
-        }
-  
-}
 
 
 $scale3D-low: scale3d(1, 1, 1);
@@ -51,9 +7,11 @@ $anim-speed: 20s;
 
 .top{
 
-    height: calc(100vw / 1.76);
+    // height: calc(100vw / 1.76);
+    height: calc(100vh / 1);
 
     width: 100%;
+    
 
     @include flex-column-center;
 
@@ -61,6 +19,8 @@ $anim-speed: 20s;
     background: url(/src/img/bg-1-1.png);
 
     overflow: hidden;
+
+  
 
     animation: main-bg-fx 15s infinite linear ;
     @keyframes main-bg-fx {
@@ -70,6 +30,10 @@ $anim-speed: 20s;
         to {background-size:calc(100vw * 7); background-position-x: -700px;background-position-y: -100px;}
     }
 
+    
+
+
+ 
     &__title{   
 
         margin-bottom: 2%;
@@ -84,19 +48,22 @@ $anim-speed: 20s;
         
     }
 
-    &__button-go{
-        
-    }
+   
 
 
     &__clouds{
         position: relative;
         z-index: 1;
         filter: brightness(0.99);
+
+        background: transparent;
+        
+        
         
     }
 
     &__cloud-1{
+        
         z-index: 2;
 
 

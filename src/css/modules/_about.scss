@@ -1,9 +1,11 @@
 .about{
-    height: calc(100vw / 1.76);
+
+    height: calc(100vh / 1);
     
     width: 100%;
 
     @include flex-column-center;
+
     
     
     background-image: url('/src/img/bg-1-1.png');
@@ -18,7 +20,7 @@
 
 
     &__title{
-        margin: 30px 0 30px 0;
+        margin: 120px 0 60px 0;
 
         text-align: center;
         font-size: calc(100vw / 100);
@@ -31,11 +33,14 @@
     }
 
     &__about{
+        
+
+        width: 850px;
 
 
         text-align: center;
         font-size: calc(100vw / 100);
-        line-height: 2.2rem;
+        line-height: 4.2rem;
         
         color: $title-color-3;
         letter-spacing: 2px;
@@ -46,7 +51,7 @@
 
     &__to-top{
 
-        margin: 20% 0 0 80%;
+        margin: 10% 0 0 80%;
     }
     
 }
